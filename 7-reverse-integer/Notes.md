@@ -1,1 +1,1 @@
-<h2>reverse-integer Notes</h2><hr>[ Time taken: 2hrs 22m 39s ]
+<h2>reverse-integer Notes</h2><hr>[ Time taken: 2hrs 24m 11s ]
