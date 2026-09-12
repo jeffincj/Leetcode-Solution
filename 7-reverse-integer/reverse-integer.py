@@ -5,13 +5,11 @@ class Solution(object):
         else: sign=1
         x=abs(x)
         s=0
-        c=0
-        while x!=0:
-            c+=1
+        while x:
             d=x%10
             s=s*10+d
             x//=10
-        if s<2**31:
+        if -2**31 <= s <= 2**31 - 1:
             return sign*s
         return 0
 
