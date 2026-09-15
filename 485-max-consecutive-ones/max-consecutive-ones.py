@@ -5,6 +5,6 @@ class Solution(object):
             if i ==1:
                 n+=1
             else:
-                nm=max(nm,n)
                 n=0
-        return max(nm,n)    
+            nm=max(nm,n)
+        return nm   
