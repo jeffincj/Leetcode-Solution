@@ -3,7 +3,6 @@ class Solution(object):
         res=0
         ps=0
         mp={0:1}
-
         for i in range(len(nums)):
             ps+=nums[i]
             if ps-k in mp:
