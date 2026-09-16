@@ -6,6 +6,6 @@ class Solution(object):
         for i in range(len(nums)):
             ps+=nums[i]
             if ps-k in mp:
-                res+=mp.get(ps-k)
+                res+=mp[ps-k]
             mp[ps]=mp.get(ps,0)+1
         return res
