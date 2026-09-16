@@ -1,8 +1,7 @@
 class NumArray(object):
 
     def __init__(self, nums):
-        self.nums=nums
-        self.pnums=[]
+        self.pnums=[0]
         s=0
         for n in nums:
             s+=n
@@ -11,9 +10,7 @@ class NumArray(object):
         
 
     def sumRange(self, left, right):
-        if left ==0:
-            return self.pnums[right]
-        return self.pnums[right]-self.pnums[left-1]
+        return self.pnums[right+1]-self.pnums[left]
         
         
 
