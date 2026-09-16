@@ -2,12 +2,12 @@ class Solution(object):
     def majorityElement(self, nums):
         can=nums[0]
         c=1
-        for i in range(1,len(nums)):
-            if can==nums[i]:
+        for i in nums[1:]:
+            if can==i:
                 c+=1
             else:
                 c-=1
             if c==0:
-                can=nums[i]
+                can=i
                 c=1
         return can       
