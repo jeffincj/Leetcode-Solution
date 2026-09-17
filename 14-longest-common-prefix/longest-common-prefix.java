@@ -1,14 +1,26 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        String pr="";
-        for(char c:strs[0].toCharArray()){
-            pr+=c;
-            for (int j=1;j<strs.length;j++){
-                if (!strs[j].startsWith(pr)){
-                    return pr.substring(0, pr.length() - 1);
+
+        int minLen = strs[0].length();
+
+        // Find shortest string length
+        for (String s : strs) {
+            minLen = Math.min(minLen, s.length());
+        }
+
+        // Compare characters column by column
+        for (int i = 0; i < minLen; i++) {
+
+            char c = strs[0].charAt(i);
+
+            for (int j = 1; j < strs.length; j++) {
+
+                if (strs[j].charAt(i) != c) {
+                    return strs[0].substring(0, i);
                 }
             }
         }
-        return pr;
+
+        return strs[0].substring(0, minLen);
     }
 }
