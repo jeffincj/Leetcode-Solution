@@ -6,10 +6,11 @@ class Solution {
             else{
                 if(p.isEmpty())return false;
                 char top=p.pop();
-                if ((c==')'&& top!='(')||(c=='}'&& top!='{')||(c==']'&& top!='['))return false;
+                if ((c==')'&& top!='(')||
+                (c=='}'&& top!='{')||
+                (c==']'&& top!='['))return false;
                 }
             }
-            if (!p.isEmpty())return false;
-            return true;
+            return p.isEmpty();
         }
     }
